@@ -8,17 +8,20 @@
 	<script src="./jquery-1.7.2.min.js"></script>
 	<script>
 		$(function(){
-			$('#playtips1').click(function(){
-				jSound.play('../sounds/tips1.wav');
-				return false;
-			})
 		});
 	</script>
 </head>
 <body>
 
 	<ul>
-		<li><a href="#" id="playtips1">播放tips.wav</a></li>
+		<li><a href="#" onclick="javascript:jSound.play('../sounds/tips1.wav');return false;">播放tips.wav</a></li>
+		<li><a href="#" onclick="javascript:jSound.play({src:'../sounds/tips1.wav',loop:true});return false;">循环播放</a></li>
+		<li><a href="#" onclick="javascript:jSound.play({src:'../sounds/tips1.wav',loop:true,volume:0});return false;">音量0循环播放</a></li>
+		<li><a href="#" onclick="javascript:jSound.play({src:'../sounds/tips1.wav',loop:true,volume:30});return false;">音量30循环播放</a></li>
+		<li><a href="#" onclick="javascript:jSound.play({src:'../sounds/tips1.wav',loop:true,volume:50});return false;">音量50循环播放</a></li>
+		<li><a href="#" onclick="javascript:jSound.play({src:'../sounds/tips1.wav',loop:true,volume:80});return false;">音量80循环播放</a></li>
+		<li><a href="#" onclick="javascript:jSound.play({src:'../sounds/tips1.wav',loop:true,volume:100});return false;">音量100循环播放</a></li>
+		<li><a href="#" onclick="javascript:jSound.stop();return false;">停止</a></li>
 	</ul>
 	
 </body>
