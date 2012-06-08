@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang="ru-RU">
+<head>
+	<meta charset="UTF-8">
+	<title>jSound 演示</title>
+	<script src="../src/jSound.js"></script>
+	<script src="../src/sounds.js"></script>
+	<script src="./jquery-1.7.2.min.js"></script>
+	<script>
+		$(function(){
+		});
+	</script>
+</head>
+<body>
+
+	<ul>
+		<li><a href="#" onclick="javascript:jSound.play('../sounds/tips1.wav');return false;">播放tips.wav</a></li>
+		<li><a href="#" onclick="javascript:jSound.playTone('tips1');return false;">播放BASE64</a></li>
+	</ul>
+	
+</body>
+</html>
