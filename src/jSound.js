@@ -41,6 +41,12 @@
 				}else{
 					elem.src='';
 				}
+			},
+			playTone:function(toneName){
+				elem.src='data:audio/wav;base64,'+this.sounds[toneName];
+				if (elem.canPlayType){
+					elem.play();
+				}
 			}
 		}
 	}();
