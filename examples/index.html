@@ -5,8 +5,21 @@
 	<title>jSound 演示</title>
 	<script src="../src/jSound.js"></script>
 	<script src="../src/sounds.js"></script>
+	<script src="./jquery-1.7.2.min.js"></script>
+	<script>
+		$(function(){
+			$('#playtips1').click(function(){
+				jSound.play('../sounds/tips1.wav');
+				return false;
+			})
+		});
+	</script>
 </head>
 <body>
+
+	<ul>
+		<li><a href="#" id="playtips1">播放tips.wav</a></li>
+	</ul>
 	
 </body>
 </html>
