@@ -1,7 +1,7 @@
 jSound
 ======
 
-jSound是一个轻量级的web提示声音兼容库，不依赖Flash等外部插件。
+jSound是一个轻量级的web提示声音兼容库，不依赖Flash等外部插件。在线演示：<http://www.toobug.net/jSound>
 
 特色
 ======
