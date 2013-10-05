@@ -77,6 +77,20 @@
 		}
 	};
 
+	/**
+	 * 对指定字符重复count次，返回一个重复字符串
+	 * @param  {String} str   要重复的字符串
+	 * @param  {Number} count 要重复的次数
+	 * @return {String}       对str重复count次之后的新字符串
+	 */
+	jSound._repeatStr = function(str,count){
+		var tempstr = '';
+		for (var i=count; i-- ; ){
+			tempstr += str;
+		}
+		return tempstr;
+	}
+
 	//detect DOM Ready Event
 	if (window.addEventListener){
 		jSound.domReady = function(readyFunc){
