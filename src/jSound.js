@@ -1,10 +1,16 @@
-~function(w){
+/**
+ * jSound 0.0.1 preview
+ * @author TooBug <i@toobug.net>
+ * @license MIT
+*/
+(function(w){
+	'use strict';
 	if (!w.jSound){
 		w.jSound = {};
 	}
 	var init = function(){
 		if(w.jSound.init)return;
-		var elem = document.createElement('audio'),src;
+		var elem = document.createElement('audio');
 		if (!elem.canPlayType){
 			elem = document.createElement('bgsound');
 		}
@@ -14,7 +20,7 @@
 			if (typeof ops === 'string'){
 				options = {
 					src : ops
-				}
+				};
 			}else{
 				options = ops;
 			}
@@ -51,7 +57,7 @@
 	if (window.addEventListener){
 		w.jSound.domReady = function(readyFunc){
 			document.addEventListener('DOMContentLoaded',readyFunc,false);
-		}
+		};
 	}else if (window.attachEvent){
 		w.jSound.domReady = function(readyFunc){
 			document.attachEvent('onreadystatechange',function(){
@@ -59,11 +65,11 @@
 					readyFunc();
 				}
 			});
-		}
+		};
 	}
 
 	w.jSound.domReady(function(){
 		init(w);
 	});
 
-}(window);
+})(window);
