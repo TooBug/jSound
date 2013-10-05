@@ -52,6 +52,11 @@
 			elem.play();
 		}
 	};
+
+	/**
+	 * 停止播放音效
+	 * @return {undefined}
+	 */
 	jSound.stop = function(){
 		if (elem.canPlayType){
 			elem.pause();
@@ -59,6 +64,12 @@
 			elem.src='';
 		}
 	};
+
+	/**
+	 * 播放内置音效
+	 * @param  {String} toneName 音效名字
+	 * @return {undefined}
+	 */
 	jSound.playTone = function(toneName){
 		elem.src='data:audio/wav;base64,'+this.sounds[toneName];
 		if (elem.canPlayType){
@@ -82,7 +93,7 @@
 	}
 
 	jSound.domReady(function(){
-		init(w);
+		init();
 	});
 
 	w.jSound = jSound;
